@@ -4,7 +4,7 @@
   <artifactId>KickStart</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <build>
-		<plugins>
+		<plugins> <!-- This is comment -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
