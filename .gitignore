@@ -1,0 +1,16 @@
+*~
+.DS_Store
+**/.DS_Store
+*.iml
+**/logs
+**/target
+**/test-output
+**/Tasks.txt
+.idea/
+.idea
+/allure-results/
+.idea/workspace.xml
+/ServiceabilityAutomation.iml
+.classpath
+.project
+.settings/
