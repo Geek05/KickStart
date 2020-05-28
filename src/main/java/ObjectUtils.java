@@ -1,3 +1,7 @@
+import gherkin.deps.com.google.gson.Gson;
+
+import java.util.Objects;
+
 public class ObjectUtils {
 
     public static <T> Object CloneObject(Object object, Class<T> className){
