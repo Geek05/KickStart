@@ -19,8 +19,10 @@ public class TestLogging {
         // setting up a FileAppender dynamically...
         SimpleLayout layout = new SimpleLayout();
         PatternLayout patternLayout = new PatternLayout("%d{ISO8601} %-5p %x - %m%n");
-        FileAppender appender = new FileAppender(patternLayout,"logs/custom.log",true);
-        logger.addAppender(appender);
+        FileAppender fileAppender = new FileAppender(patternLayout,"logs/custom.log",true);
+        ConsoleAppender consoleAppender  = new ConsoleAppender(patternLayout);
+        logger.addAppender(fileAppender);
+        logger.addAppender(consoleAppender);
 
         logger.setLevel((Level) Level.DEBUG);
 
