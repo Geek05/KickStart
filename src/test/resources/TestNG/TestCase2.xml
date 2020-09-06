@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestCase2" verbose="1">
+    <test name="TestCase2 Tests">
+        <classes>
+            <class name="org.mockito.MockitoExample" />
+        </classes>
+    </test>
+</suite>
