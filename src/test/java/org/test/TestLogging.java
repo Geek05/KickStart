@@ -32,4 +32,9 @@ public class TestLogging {
         logger.error("Here is some ERROR");
         logger.fatal("Here is some FATAL");
     }
+
+    @Test
+    public void testOS(){
+        System.out.println(System.getProperty("os.name"));
+    }
 }

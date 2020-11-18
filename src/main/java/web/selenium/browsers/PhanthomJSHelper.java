@@ -14,11 +14,15 @@ public class PhanthomJSHelper {
 	static String PhanthomJSPath = null;
 	
 	static {
-		PhanthomJSPath = System.getProperty("user.dir")+"/Externals/phantomjs.exe";
+		if (System.getProperty("os.name").equalsIgnoreCase("Mac OS X")) {
+			PhanthomJSPath = System.getProperty("user.dir") + "/Externals/mac/phantomjs";
+		} else {
+			PhanthomJSPath = System.getProperty("user.dir") + "/Externals/windows/phantomjs.exe";
+		}
 		System.setProperty("phantomjs.binary.path",PhanthomJSPath);
 	}
 	
-	public static PhantomJSDriver GetPhanthomJSDriver() {
+	public static WebDriver GetPhanthomJSDriver() {
 		PhantomJSDriverService driverService = new PhantomJSDriverService.Builder()
 				.usingPhantomJSExecutable(new File(PhanthomJSPath))
 				.withLogFile(new File(System.getProperty("user.dir")+"/Externals/Logs/phantomjsdriver.log"))

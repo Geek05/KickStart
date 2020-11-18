@@ -5,7 +5,6 @@ import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvParser;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 import com.opencsv.CSVWriter;
-import io.cucumber.datatable.dependency.com.fasterxml.jackson.databind.MappingIterator;
 import lombok.experimental.UtilityClass;
 
 import java.io.*;
@@ -15,8 +14,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
-
-import static com.myntra.constants.ServiceabilityDataFileUploadsPaths.UserDirectory;
 
 @UtilityClass
 public class CSVUtils {

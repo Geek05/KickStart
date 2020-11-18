@@ -1,21 +1,18 @@
 package org.selenium.test;
 
-import java.util.concurrent.TimeUnit;
-
+import org.demo.selenium.BROWSER;
 import org.demo.selenium.WebDriverService;
-import org.demo.selenium.WebDriverService.BROWSER;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.selenium.pom.LoginPage;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 public class SeleniumTest {
 
-	WebDriver driver = WebDriverService.getInstance(BROWSER.DRIVERLESS);
+	WebDriver driver = WebDriverService.getInstance(BROWSER.CHROME);
 	
 	@Test(enabled=false)
 	public void testSelenium_DataTable() {
@@ -34,13 +31,12 @@ public class SeleniumTest {
 		String password = "admin123";
 		LoginPage loginPage = new LoginPage(driver);
 		driver.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login");
+		System.out.println("Page on opening page "+driver.getTitle());
 		loginPage.setCredentials(userName, password);
 		loginPage.login();
 		System.out.println("Page Title after login"+driver.getTitle());
-		Assert.assertEquals(driver.findElement(By.id("welcome")).getText(), "Welcome "+userName);
-			
+		Assert.assertEquals("Welcome "+userName, driver.findElement(By.id("welcome")).getText());
 	}
-	
 	
 	@AfterClass
 	public void tearDown() {

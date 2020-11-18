@@ -4,6 +4,9 @@
     <groupId>org.bharathmc.selenium</groupId>
     <artifactId>KickStart</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <properties>
+        <selinuum.version>3.141.59</selinuum.version>
+    </properties>
     <build>
         <plugins>
             <plugin>
@@ -52,12 +55,12 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
+            <version>${selinuum.version}</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-support</artifactId>
-            <version>3.141.59</version>
+            <version>${selinuum.version}</version>
         </dependency>
         <!-- Phantom JS -->
         <dependency>
