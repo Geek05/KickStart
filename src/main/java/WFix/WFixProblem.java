@@ -1,6 +1,6 @@
-package whatfix;
+package WFix;
 
-public class WahtfixProblem {
+public class WFixProblem {
 
 
     /**

@@ -1,4 +1,4 @@
-package mpl;
+package mp;
 
 public enum ServiceType {
 
